@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -749,7 +750,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="自动" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" continuous="YES" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="fng-5r-qaX" id="iuu-EB-boP">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="JQ2-YA-8WK">
                                         <items>
                                             <menuItem title="自动" state="on" id="fng-5r-qaX"/>
@@ -774,7 +775,7 @@
                                     <action selector="onSearch:" target="XfG-lQ-9wD" id="jiJ-7N-uBu"/>
                                 </connections>
                             </searchField>
-                            <textField canDrawConcurrently="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuY-Qv-YOs">
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuY-Qv-YOs">
                                 <rect key="frame" x="18" y="53" width="281" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Translation" id="wBj-jO-19E" customClass="VerticallyCenteredTextFieldCell" customModule="trans" customModuleProvider="target">
@@ -865,7 +866,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" title="百度翻译" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="j74-V2-ZOn" id="KBl-Ru-jqK">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="OSe-Os-3Y1">
                                         <items>
                                             <menuItem title="百度翻译" state="on" id="j74-V2-ZOn"/>
@@ -956,11 +957,11 @@
             <point key="canvasLocation" x="61" y="473"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="NSRefreshFreestandingTemplate" width="14" height="14"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2sb-vJ-eWj"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="NSActionTemplate" width="15" height="15"/>
+        <image name="NSRefreshFreestandingTemplate" width="15" height="15"/>
+    </resources>
 </document>

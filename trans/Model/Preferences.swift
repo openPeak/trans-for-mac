@@ -8,7 +8,7 @@ struct Preferences {
         if appid != nil {
             return appid!
       }
-      return "20190324000280614"
+      return "20220811001303139"
     }
     set {
       UserDefaults.standard.set(newValue, forKey: "APPID_baidu")
@@ -34,7 +34,7 @@ struct Preferences {
             if key != nil {
                 return key!
           }
-          return "rYR8A0Lek15iB6v1yn0k"
+          return "iejU7dq0JPquxHqeJ9GP"
         }
         set {
           UserDefaults.standard.set(newValue, forKey: "key_baidu")

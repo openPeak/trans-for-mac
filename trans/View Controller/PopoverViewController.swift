@@ -104,6 +104,8 @@ class PopoverViewController: NSViewController {
     
     func getTranslationResult(str:String, type:String) -> Void {
         
+        print("zzp01 copy_str == ", str);
+        
         var to_temp = to
         
         if (str.isEmpty) {
@@ -162,18 +164,18 @@ class PopoverViewController: NSViewController {
             DispatchQueue.main.async {
                 do {
                     let decoder = JSONDecoder()
-                    //                    let str = String(decoding: data!, as: UTF8.self)
-                    //                    print(str)
+
                     struct Res_bd: Codable {
-                        var from: String
-                        var to: String
-                        var trans_result: [TransResult]
+                        var from: String // 返回用户指定的语言，或自动检测的语言（源语言设为auto时）
+                        var to: String // 返回用户指定的目标语言(这里就是 en 或者 zh)
+                        var trans_result: [TransResult] // 返回翻译结果，包含src 和 dst 字段。
                         
                         struct TransResult: Codable {
-                            let src: String
-                            let dst: String
+                            let src: String // query原文
+                            let dst: String // 译文
                         }
                     }
+
                     struct Res_yd: Codable {
                         let tSpeakURL: String?
                         let returnPhrase: [String]?
@@ -220,22 +222,40 @@ class PopoverViewController: NSViewController {
                         let key: String
                     }
                     
-                    if (data != nil){
+                    if (data != nil) {
                         if (defaultEngine==0){
                             let r = try decoder.decode(Res_bd.self, from: data!)
-                            tempTrans = r.trans_result[0].dst;
-                            temp = r.trans_result[0].src;
+                            
+                            // modify：2022年08月11日21:09:54 by zhangzhengping
+                            // 对于copy的内容是多行情况，把response拼接成后打印出来
+                            var src_str = "";
+                            var result_str = "";
+                            
+                            for index in r.trans_result {
+                                src_str += index.src + "\n";
+                                result_str += index.dst + "\n";
+                            }
+                            
+                            // 去除最后一个\n
+                            src_str = String(src_str.dropLast())
+                            result_str = String(result_str.dropLast())
+                            
+                            tempTrans = result_str;
+                            temp = src_str;
+                            
+//                            print("zzp03 result_str == ", result_str);
                         }
                         else{
-                            print("youdao")
+//                            print("youdao")
                             let r = try decoder.decode(Res_yd.self, from: data!)
                             print("r")
                             tempTrans = r.translation[0];
                             temp = r.query;
                         }
                         
+                        // 调用自封装notify函数，把内容通过mac系统调用打到“通知中心”
                         if (type == "copy" || type == "ocr" ) {
-                            self.notify(title: temp,body: tempTrans,type:type)
+                            self.notify(title: temp, body: tempTrans, type:type)
                         }
                         else {
                             self.resultText.stringValue = tempTrans;
@@ -243,9 +263,14 @@ class PopoverViewController: NSViewController {
                     }
                     
                 } catch{
+                    let str = String(decoding: data!, as: UTF8.self)
+//                    print("erro response :", str)
+                    
+                    // modify：2022年08月11日20:54:18 by zhangzhengping
+                    // 请求server出错，把出错body打印出来；
                     self.resultText.stringValue = "Error";
                     if (type == "copy" ) {
-                        self.notify(title: "Error",body: "Something bad just happened",type:type)
+                        self.notify(title: "Error", body: str, type:type)
                     }
                     return
                 }
@@ -296,7 +321,7 @@ class PopoverViewController: NSViewController {
         center.requestAuthorization(options: [.alert, .sound]) { success, error in
             if error == nil {
                 if success == true {
-                    print("Permission granted")
+//                    print("Permission granted")
                     let content = UNMutableNotificationContent()
                     content.title = title;
                     content.body = body;

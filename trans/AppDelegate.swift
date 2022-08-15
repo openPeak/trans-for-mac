@@ -65,7 +65,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // 全局快捷键
-        hotKey = HotKey(key: .a, modifiers: [.control])
+        hotKey = HotKey(key: .a, modifiers: [.control, .option])
         
         // 指定右键菜单的代理
         menu.delegate = self

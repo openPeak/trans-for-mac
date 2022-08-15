@@ -104,7 +104,7 @@ class PopoverViewController: NSViewController {
     
     func getTranslationResult(str:String, type:String) -> Void {
         
-        print("zzp01 copy_str == ", str);
+//        print("zzp01 copy_str == ", str);
         
         var to_temp = to
         

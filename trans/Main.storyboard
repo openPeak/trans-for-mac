@@ -685,7 +685,7 @@
                 <menu id="DwD-w9-lcA">
                     <items>
                         <menuItem title="截图取词" keyEquivalent="a" allowsKeyEquivalentWhenHidden="YES" id="XPC-bA-qvd">
-                            <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                            <modifierMask key="keyEquivalentModifierMask" control="YES" option="YES"/>
                             <connections>
                                 <action selector="onCapture:" target="Voe-Tx-rLC" id="lXk-FJ-hfC"/>
                             </connections>

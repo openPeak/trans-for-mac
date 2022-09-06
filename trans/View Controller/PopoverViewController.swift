@@ -152,11 +152,27 @@ class PopoverViewController: NSViewController {
             appid = APPID_youdao
             key = key_youdao
             curtime = Date().timeStamp
+            
             base = "https://openapi.youdao.com/api"
-            sign = sha256(str: appid+str+salt+String(curtime)+key)
+            
+            var input = str;
+            
+            // 有道api: 其中，input的计算方式为：input=q前10个字符 + q长度 + q后10个字符（当q长度大于20）或 input=q字符串（当q长度小于等于20）；
+            if (strlen(str) > 20)
+            {
+                let str_len = strlen(str)
+                let begin_str = str.subString(to: 10)
+                let end_str = str.subString(from: str_len - 10)
+                input = begin_str + String(str_len) + end_str
+//                print("zzp - input = ", input)
+            }
+            
+            sign = sha256(str: appid+input+salt+String(curtime)+key)
+
             if (to_temp=="zh") {
                 to_temp="zh-CHS"
             }
+
             url = base+"?q="+str.urlEncoded()+"&from=auto&to="+to_temp+"&appKey="+appid+"&salt="+salt+"&sign="+sign+"&signType=v3"+"&curtime="+curtime;
         }
         
@@ -389,6 +405,36 @@ extension String {
     //将编码后的url转换回原始的url
     func urlDecoded() -> String {
         return self.removingPercentEncoding ?? ""
+    }
+    
+    
+    // ***************************  字符串截取相关操作 *****************************
+    /// 截取到任意位置
+    func subString(to: Int) -> String {
+        let index: String.Index = self.index(startIndex, offsetBy: to)
+        return String(self[..<index])
+    }
+    /// 从任意位置开始截取
+    func subString(from: Int) -> String {
+        let index: String.Index = self.index(startIndex, offsetBy: from)
+        return String(self[index ..< endIndex])
+    }
+    /// 从任意位置开始截取到任意位置
+    func subString(from: Int, to: Int) -> String {
+        let beginIndex = self.index(self.startIndex, offsetBy: from)
+        let endIndex = self.index(self.startIndex, offsetBy: to)
+        return String(self[beginIndex...endIndex])
+    }
+    //使用下标截取到任意位置
+    subscript(to: Int) -> String {
+        let index = self.index(self.startIndex, offsetBy: to)
+        return String(self[..<index])
+    }
+    //使用下标从任意位置开始截取到任意位置
+    subscript(from: Int, to: Int) -> String {
+        let beginIndex = self.index(self.startIndex, offsetBy: from)
+        let endIndex = self.index(self.startIndex, offsetBy: to)
+        return String(self[beginIndex...endIndex])
     }
 }
 

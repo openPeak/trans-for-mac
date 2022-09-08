@@ -160,7 +160,7 @@ class PopoverViewController: NSViewController {
             // 有道api: 其中，input的计算方式为：input=q前10个字符 + q长度 + q后10个字符（当q长度大于20）或 input=q字符串（当q长度小于等于20）；
             if (strlen(str) > 20)
             {
-                let str_len = strlen(str)
+                let str_len = str.utf16.count
                 let begin_str = str.subString(to: 10)
                 let end_str = str.subString(from: str_len - 10)
                 input = begin_str + String(str_len) + end_str

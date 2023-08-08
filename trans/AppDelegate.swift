@@ -64,8 +64,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // [截图取词]的全局快捷键： control + option + a
+        // [截图取词]的全局快捷键： Control + Option + a
         hotKey = HotKey(key: .a, modifiers: [.control, .option])
+        
+        // (开启|关闭)[复制取词]的快捷键：Control + Option + Commond + P
+        newHotKey = HotKey(key: .p, modifiers: [.control, .option, .command])
         
         // 指定右键菜单的代理
         menu.delegate = self
@@ -132,6 +135,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         timer.invalidate()
     }
     
+    // [截图取词]的全局快捷键
     public var hotKey: HotKey?{
         didSet {
             guard let hotKey = hotKey else{
@@ -143,6 +147,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     return
                 }
                 self!.recognizepic(picPath: picPath)
+            }
+        }
+    }
+    
+    // (开启|关闭)[复制取词]的快捷键
+    public var newHotKey: HotKey?{
+        didSet {
+            guard let newHotKey = newHotKey else{
+                return
+            }
+            
+            newHotKey.keyDownHandler = { [weak self] in
+                if let strongSelf = self {
+                    if (strongSelf.pasteTransToggle.state.rawValue == 1) { //开->关
+                        strongSelf.pasteTransToggle.state = NSControl.StateValue.off
+                        strongSelf.timer.invalidate()
+                    }
+                    else { //关->开
+                        strongSelf.pasteTransToggle.state = NSControl.StateValue.on
+                        strongSelf.newTimer()
+                    }
+                    strongSelf.prefs.enablePasteTrans = strongSelf.pasteTransToggle.state.rawValue
+                }
             }
         }
     }

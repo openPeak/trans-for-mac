@@ -87,54 +87,54 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7"
-            shouldBeEnabled = "No"
+            uuid = "C037A878-5C60-46BB-906D-6B38CA3EFF24"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "trans/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "AppDelegate"
-            landmarkType = "3">
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "newHotKey"
+            landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7 - 5582c09e6306ca16"
+                  uuid = "C037A878-5C60-46BB-906D-6B38CA3EFF24 - ed6a229c7997863e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "trans.AppDelegate.pasteTransToggle.getter : Swift.Optional&lt;__C.NSMenuItem&gt;"
+                  symbolName = "trans.AppDelegate.newHotKey.getter : Swift.Optional&lt;HotKey.HotKey&gt;"
                   moduleName = "trans"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangzhengping/Desktop/project/trans-for-mac-new/trans/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "85">
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "90">
                </Location>
                <Location
-                  uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7 - c08144068b7cc21a"
+                  uuid = "C037A878-5C60-46BB-906D-6B38CA3EFF24 - 8595d9122df82a7a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "trans.AppDelegate.pasteTransToggle.setter : Swift.Optional&lt;__C.NSMenuItem&gt;"
+                  symbolName = "trans.AppDelegate.newHotKey.setter : Swift.Optional&lt;HotKey.HotKey&gt;"
                   moduleName = "trans"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangzhengping/Desktop/project/trans-for-mac-new/trans/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "136">
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "121">
                </Location>
                <Location
-                  uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7 - 500f1f3a65eb38b1"
+                  uuid = "C037A878-5C60-46BB-906D-6B38CA3EFF24 - 1acf1ddd31564f24"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "trans.AppDelegate.pasteTransToggle.modify : Swift.Optional&lt;__C.NSMenuItem&gt;"
+                  symbolName = "trans.AppDelegate.newHotKey.modify : Swift.Optional&lt;HotKey.HotKey&gt;"
                   moduleName = "trans"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangzhengping/Desktop/project/trans-for-mac-new/trans/AppDelegate.swift"
@@ -142,25 +142,25 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "27">
                </Location>
                <Location
-                  uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7 - e44bd478501ff2c0"
+                  uuid = "C037A878-5C60-46BB-906D-6B38CA3EFF24 - ed7431eddec366d0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "trans.AppDelegate.pasteTransToggle.modify : Swift.Optional&lt;__C.NSMenuItem&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  symbolName = "trans.AppDelegate.newHotKey.modify : Swift.Optional&lt;HotKey.HotKey&gt; with unmangled suffix &quot;.resume.0&quot;"
                   moduleName = "trans"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhangzhengping/Desktop/project/trans-for-mac-new/trans/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "26">
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "17">
                </Location>
                <Location
-                  uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7 - 4e8243505d76918a"
+                  uuid = "C037A878-5C60-46BB-906D-6B38CA3EFF24 - 4e8243505d766125"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -170,9 +170,9 @@
                   urlString = "file:///Users/zhangzhengping/Desktop/project/trans-for-mac-new/trans/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "194">
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "608">
                </Location>
             </Locations>
          </BreakpointContent>

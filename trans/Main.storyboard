@@ -690,7 +690,7 @@
                                 <action selector="onCapture:" target="Voe-Tx-rLC" id="lXk-FJ-hfC"/>
                             </connections>
                         </menuItem>
-                        <menuItem title="复制取词" state="mixed" alternate="YES" keyEquivalent="p" id="ctg-bT-eHK">
+                        <menuItem title="复制取词" state="on" keyEquivalent="p" allowsKeyEquivalentWhenHidden="YES" id="ctg-bT-eHK">
                             <modifierMask key="keyEquivalentModifierMask" control="YES" option="YES" command="YES"/>
                             <connections>
                                 <action selector="onTogglePasteTrans:" target="Voe-Tx-rLC" id="bSy-6t-RlX"/>
@@ -958,7 +958,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kya-ky-7uu"/>
+        <segue reference="2sb-vJ-eWj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="NSActionTemplate" width="15" height="15"/>

@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7F227B31-F676-45E7-99EB-0104E4615BEB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "trans/View Controller/PopoverViewController.swift"
@@ -82,6 +82,99 @@
             endingLineNumber = "151"
             landmarkName = "getTranslationResult(str:type:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "trans/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7 - 5582c09e6306ca16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "trans.AppDelegate.pasteTransToggle.getter : Swift.Optional&lt;__C.NSMenuItem&gt;"
+                  moduleName = "trans"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangzhengping/Desktop/project/trans-for-mac-new/trans/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7 - c08144068b7cc21a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "trans.AppDelegate.pasteTransToggle.setter : Swift.Optional&lt;__C.NSMenuItem&gt;"
+                  moduleName = "trans"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangzhengping/Desktop/project/trans-for-mac-new/trans/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7 - 500f1f3a65eb38b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "trans.AppDelegate.pasteTransToggle.modify : Swift.Optional&lt;__C.NSMenuItem&gt;"
+                  moduleName = "trans"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangzhengping/Desktop/project/trans-for-mac-new/trans/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7 - e44bd478501ff2c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "trans.AppDelegate.pasteTransToggle.modify : Swift.Optional&lt;__C.NSMenuItem&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "trans"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangzhengping/Desktop/project/trans-for-mac-new/trans/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "AFD56C17-B60A-4FBB-9149-D26F01A4EDE7 - 4e8243505d76918a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "trans.AppDelegate.init() -&gt; trans.AppDelegate"
+                  moduleName = "trans"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhangzhengping/Desktop/project/trans-for-mac-new/trans/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "194">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -690,8 +690,8 @@
                                 <action selector="onCapture:" target="Voe-Tx-rLC" id="lXk-FJ-hfC"/>
                             </connections>
                         </menuItem>
-                        <menuItem title="复制取词" state="on" id="ctg-bT-eHK">
-                            <modifierMask key="keyEquivalentModifierMask"/>
+                        <menuItem title="复制取词" state="mixed" alternate="YES" keyEquivalent="p" id="ctg-bT-eHK">
+                            <modifierMask key="keyEquivalentModifierMask" control="YES" option="YES" command="YES"/>
                             <connections>
                                 <action selector="onTogglePasteTrans:" target="Voe-Tx-rLC" id="bSy-6t-RlX"/>
                             </connections>
@@ -748,13 +748,13 @@
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPH-yH-5Lt">
                                 <rect key="frame" x="18" y="141" width="62" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="自动" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" continuous="YES" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="fng-5r-qaX" id="iuu-EB-boP">
+                                <popUpButtonCell key="cell" type="push" title="→中" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" continuous="YES" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="HwS-On-W8G" id="iuu-EB-boP">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="JQ2-YA-8WK">
                                         <items>
-                                            <menuItem title="自动" state="on" id="fng-5r-qaX"/>
-                                            <menuItem title="→中" id="HwS-On-W8G"/>
+                                            <menuItem title="自动" id="fng-5r-qaX"/>
+                                            <menuItem title="→中" state="on" id="HwS-On-W8G"/>
                                             <menuItem title="→英" id="LLR-O1-I9x"/>
                                         </items>
                                     </menu>
@@ -809,7 +809,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-475" y="175"/>
+            <point key="canvasLocation" x="-475.5" y="174.5"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="n1n-NP-fxf">
@@ -958,7 +958,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2sb-vJ-eWj"/>
+        <segue reference="kya-ky-7uu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="NSActionTemplate" width="15" height="15"/>

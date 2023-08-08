@@ -64,7 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // 全局快捷键
+        // [截图取词]的全局快捷键： control + option + a
         hotKey = HotKey(key: .a, modifiers: [.control, .option])
         
         // 指定右键菜单的代理
